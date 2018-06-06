@@ -1,3 +1,5 @@
+# naked-budget-core webapp
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
@@ -164,6 +166,8 @@ They will not be included in the production build so you can use them for things
 ## Available Scripts
 
 In the project directory, you can run:
+
+> Instead of `npm`, `yarn` should be ran. This project does not use `npm`.
 
 ### `npm start`
 
