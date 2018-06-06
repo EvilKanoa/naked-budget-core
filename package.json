@@ -7,7 +7,9 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "cd client && yarn build",
+    "production": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "express": "4.16.2"
