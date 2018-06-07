@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "private": "true",
+  "engines": {
+    "node": "8.11.2",
+    "yarn": "1.3.x"
+  },
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
@@ -10,6 +14,7 @@
     "lint": "eslint .",
     "build": "cd client && yarn build",
     "production": "NODE_ENV=production node server.js",
+    "postinstall": "yarn build",
     "test": "echo TODO: Implement testing"
   },
   "dependencies": {
