@@ -11,7 +11,7 @@
     "server": "nodemon ./server/app.js",
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "lint": "eslint .",
-    "build": "cd client && yarn build",
+    "build": "cd client && yarn install && yarn build",
     "production": "NODE_ENV=production node ./server/app.js",
     "postinstall": "yarn build",
     "test": "echo TODO: Implement testing"
