@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "8"
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+install:
+  - yarn install
+script:
+  - yarn test
+
+deploy:
+  provider: heroku
+  api_key: ba79836e-3094-45e9-94c0-b29be2dfde65
+  app: naked-budget-core

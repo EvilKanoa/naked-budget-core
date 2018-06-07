@@ -9,7 +9,8 @@
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "lint": "eslint .",
     "build": "cd client && yarn build",
-    "production": "NODE_ENV=production node server.js"
+    "production": "NODE_ENV=production node server.js",
+    "test": "echo TODO: Implement testing"
   },
   "dependencies": {
     "express": "4.16.2"
