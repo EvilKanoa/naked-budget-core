@@ -4,16 +4,15 @@
   "license": "UNLICENSED",
   "private": "true",
   "engines": {
-    "node": "8.11.2",
-    "yarn": "1.3.x"
+    "node": "8.11.2"
   },
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
+    "server": "nodemon ./server/app.js",
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "lint": "eslint .",
     "build": "cd client && yarn build",
-    "production": "NODE_ENV=production node server.js",
+    "production": "NODE_ENV=production node ./server/app.js",
     "postinstall": "yarn build",
     "test": "echo TODO: Implement testing"
   },
