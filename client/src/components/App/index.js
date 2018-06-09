@@ -6,7 +6,7 @@ const App = props => {
     <div className="app">
       <center>
         <div>
-          <p> NakedBudget - The budgeting app that exposes your money to reality </p>
+          <p> NakedBudget - The budgeting app that exposes your money to reality! </p>
           <h3> Under Construction... </h3>
         </div>
       </center>
