@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 import './index.css';
-import 'foundation-sites/dist/css/foundation.min.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
