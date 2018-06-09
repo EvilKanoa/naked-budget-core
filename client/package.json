@@ -4,7 +4,6 @@
   "proxy": "http://localhost:3001/",
   "private": true,
   "dependencies": {
-    "foundation-sites": "^6.4.4-rc1",
     "lodash": "4.17.10",
     "prop-types": "15.6.1",
     "react": "16.4.0",
