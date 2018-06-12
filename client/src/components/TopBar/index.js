@@ -4,7 +4,7 @@ import './index.css'
 const TopBar = () => {
     return (
         <div className={'topBar'}>
-            <span style={{textAlign: 'center'}}> NakedBudget </span>
+            <span style={{textAlign: 'middle'}}> NB </span>
         </div>
     )
 };

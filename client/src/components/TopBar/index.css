@@ -1,4 +1,5 @@
 .topBar {
     background-color: var(--theme-primary-color);
     height: 100%;
+    width: 100%;
 }

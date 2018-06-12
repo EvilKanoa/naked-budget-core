@@ -1,47 +1,30 @@
 import React from 'react';
-import VerticalContainer from '../VerticalContainer';
-import HorizontalContainer from '../HorizontalContainer';
 import TopBar from '../TopBar';
 import Sidebar from '../Sidebar';
 import AppContainer from '../AppContainer';
+import { Grid, Row, Col } from 'react-bootstrap';
+import './index.css';
 
 const App = () => {
     return (
-        <VerticalContainer>
-            <TopBar
-                height={'4rem'}
-                refKey={'appTopBar'}
-            />
-            <HorizontalContainer
-                refKey={'appHorizontalContainer'}
-            >
-                <Sidebar
-                    width={'12rem'}
-                    refKey={'appSidebar'}
-                />
-                <AppContainer
-                    refKey={'appMainContainer'}
-                />
-            </HorizontalContainer>
-        </VerticalContainer>
+        <div className='app'>
+            <Grid fluid={true}>
+                <Row className='show-grid'>
+                    <Col xs={12}>
+                        <TopBar/>
+                    </Col>
+                </Row>
+                <Row className='show-grid'>
+                    <Col md={2}>
+                        <Sidebar/>
+                    </Col>
+                    <Col md={10}>
+                        <AppContainer/>
+                    </Col>
+                </Row>
+            </Grid>
+        </div>
     );
-  // return (
-  //     <VerticalContainer spacedChildren={[
-  //         {
-  //             height: '2rem',
-  //             element: <TopBar />
-  //         }
-  //     ]}>
-  //         <HorizontalContainer spacedChildren={[
-  //             {
-  //                 width: '8rem',
-  //                 element: <Sidebar />
-  //             }
-  //         ]}>
-  //             <AppContainer />
-  //         </HorizontalContainer>
-  //     </VerticalContainer>
-  // );
 };
 
 export default App;
