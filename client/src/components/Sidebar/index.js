@@ -3,7 +3,7 @@ import './index.css';
 
 const Sidebar = () => {
     return (
-        <div className={'sidebar'}>
+        <div id='sidebar'>
             Test
         </div>
     )

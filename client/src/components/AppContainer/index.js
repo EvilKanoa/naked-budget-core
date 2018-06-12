@@ -3,7 +3,7 @@ import './index.css';
 
 const AppContainer = () => {
     return (
-        <div className={'appContainer'}>
+        <div id='appContainer'>
             Test
         </div>
     )

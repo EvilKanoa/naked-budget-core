@@ -7,7 +7,7 @@ import './index.css';
 
 const App = () => {
     return (
-        <div className='app'>
+        <div id='app'>
             <Grid fluid={true}>
                 <Row className='show-grid'>
                     <Col xs={12}>
