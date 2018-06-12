@@ -1,0 +1,8 @@
+.horizontalContainer {
+    display: flex;
+    width: 100%;
+}
+
+.horizontalElement {
+    flex-grow: 1;
+}
