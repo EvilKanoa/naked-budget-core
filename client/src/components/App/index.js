@@ -5,20 +5,22 @@ import AppContainer from '../AppContainer';
 import { Grid, Row, Col } from 'react-bootstrap';
 import './index.css';
 
+const LOGO_IMAGE = 'logo.png';
+
 const App = () => {
     return (
         <div id='app'>
             <Grid fluid={true}>
                 <Row className='show-grid'>
-                    <Col xs={12}>
-                        <TopBar/>
+                    <Col xs={12} className='remove-col-padding'>
+                        <TopBar img={LOGO_IMAGE}/>
                     </Col>
                 </Row>
-                <Row className='show-grid'>
-                    <Col md={2}>
+                <Row className='show-grid full-height'>
+                    <Col md={1} className='remove-col-padding full-height'>
                         <Sidebar/>
                     </Col>
-                    <Col md={10}>
+                    <Col md={11} className='remove-col-padding full-height'>
                         <AppContainer/>
                     </Col>
                 </Row>

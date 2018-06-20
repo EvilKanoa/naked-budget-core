@@ -1,12 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getPageComponent } from '../../selectors/appState'
 import './index.css';
 
-const AppContainer = () => {
+const AppContainer = connect(
+    (state) => ({
+        page: getPageComponent(state)
+    })
+)((props) => {
     return (
         <div id='appContainer'>
-            Test
+            {props.page}
         </div>
     )
-};
+});
 
 export default AppContainer;

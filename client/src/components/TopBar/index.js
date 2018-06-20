@@ -1,10 +1,13 @@
 import React from 'react';
 import './index.css'
 
-const TopBar = () => {
+const TopBar = (props) => {
     return (
         <div id='topBar'>
-            <span style={{textAlign: 'middle'}}> NB </span>
+            <img
+                src={`img/${props.img}`}
+                alt='NakedBudget'
+            />
         </div>
     )
 };
