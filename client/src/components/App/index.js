@@ -17,10 +17,10 @@ const App = () => {
                     </Col>
                 </Row>
                 <Row className='show-grid full-height'>
-                    <Col md={1} className='remove-col-padding full-height'>
+                    <Col md={1} className='remove-col-padding full-height sidebar-width'>
                         <Sidebar/>
                     </Col>
-                    <Col md={11} className='remove-col-padding full-height'>
+                    <Col className='remove-col-padding full-height'>
                         <AppContainer/>
                     </Col>
                 </Row>
