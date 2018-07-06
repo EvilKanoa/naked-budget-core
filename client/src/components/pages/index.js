@@ -1,4 +1,5 @@
 import React from 'react';
+import Transactions from './Transactions'
 
 const Pages = [
     {
@@ -17,7 +18,7 @@ const Pages = [
         id: 'transactions',
         title: 'Transactions',
         icon: 'credit-card',
-        component: <p> Transactions Page </p>
+        component: <Transactions />
     },
     {
         id: 'settings',

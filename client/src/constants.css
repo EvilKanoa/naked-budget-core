@@ -1,7 +1,9 @@
 :root {
-    --theme-primary-color: #3c3c3c;
+    --theme-primary-color: #656565;
+    --theme-primary-color-dark: #3c3c3c;
     --theme-primary-color-dim: #282828;
-    --theme-primary-color-light: #656565;
-    --theme-secondary-color: #ffffff;
+    --theme-secondary-color: #656565;
     --theme-secondary-color-light: #bebebe;
+    --theme-container-background: #888888;
+    --theme-text: white;
 }

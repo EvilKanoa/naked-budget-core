@@ -1,5 +1,6 @@
 #appContainer {
-    background-color: var(--theme-primary-color-light);
+    background-color: var(--theme-container-background);
     height: 100%;
     width: 100%;
+    color: var(--theme-text);
 }
