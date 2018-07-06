@@ -1,0 +1,15 @@
+#topBar {
+    background-color: var(--theme-primary-color);
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#topBar > img  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 4rem;
+}
