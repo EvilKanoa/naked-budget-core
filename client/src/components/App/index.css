@@ -11,14 +11,30 @@
     padding: 0;
 }
 
-.full-height {
+.sidebar-width {
+    width: 150px;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-flow: column;
     height: 100%;
 }
 
-.sidebar-width {
-    min-width: 150px;
+.flex-horizontal {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
 }
 
-html, body, #app, #app > div, body > #root > div, #root {
+.flex-vertical .flex-fixed-child {
+    flex-grow: 0;
+}
+
+.flex-vertical .flex-fill-child {
+    flex-grow: 1;
+}
+
+html, body, #app, body > #root > div, #root {
     height: 100vh;
 }
