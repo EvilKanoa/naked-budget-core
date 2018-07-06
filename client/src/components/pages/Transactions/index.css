@@ -1,0 +1,25 @@
+#page-transactions {
+    width: 100%;
+}
+
+#page-transactions-header {
+    width: 100%;
+    background-color: var(--theme-secondary-color);
+    padding: 8px
+}
+
+#page-transactions-header .button {
+    padding: 0 8px;
+}
+
+#page-transactions-header .button .button-title {
+    padding-left: 4px;
+}
+
+#page-transactions-header .button:hover {
+    color: var(--theme-text-selected);
+}
+
+#page-transactions-table {
+    overflow-y: auto;
+}

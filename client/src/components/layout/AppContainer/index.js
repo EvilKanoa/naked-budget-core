@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getPageComponent } from '../../../selectors/appState'
+import { getPageComponent } from '../../../selectors/app'
 import './index.css';
 
 const AppContainer = connect(

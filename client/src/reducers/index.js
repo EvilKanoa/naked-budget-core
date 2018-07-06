@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import appState from './appState';
+import app from './app';
+import transactions from './transactions';
 
 export default combineReducers({
-    appState,
+    app,
+    transactions
 });
