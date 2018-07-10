@@ -3,7 +3,10 @@ import {
     ADD_TRANSACTIONS,
     REMOVE_TRANSACTIONS,
     SET_TRANSACTIONS,
-    SET_ORDER
+    SET_ORDER,
+    MODIFY_TRANSACTION,
+    START_NEW_TRANSACTION,
+    FINISH_NEW_TRANSACTION
 } from '../actions/transactions';
 
 const initialState = {
@@ -11,15 +14,11 @@ const initialState = {
     order: {
         field: 'id', // TODO: Switch to date
         ascending: false
-    }
+    },
+    new: null
 };
 
 const transactionsReducer = (state = initialState, action) => {
-    if (action.type === ADD_TRANSACTIONS) {
-        console.log(action);
-        console.log([...state.data]);
-        console.log([...state.data, ...action.transactions]);
-    }
     switch (action.type) {
         case ADD_TRANSACTIONS:
             return {
@@ -40,6 +39,34 @@ const transactionsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 order: action.order
+            };
+        case MODIFY_TRANSACTION:
+            return {
+                ...state,
+                data: _.map(state.data, (txn) => {
+                    if (txn.id === action.id) {
+                        return {
+                            ...txn,
+                            ...action.changes
+                        }
+                    } else {
+                        return txn;
+                    }
+                })
+            };
+        case START_NEW_TRANSACTION:
+            return state.new ? { ...state } : {
+                ...state,
+                data: [ ...state.data, {
+                    ...action.defaults,
+                    id: action.id
+                }],
+                new: action.id
+            };
+        case FINISH_NEW_TRANSACTION:
+            return {
+                ...state,
+                new: null
             };
         default:
             return { ...state };

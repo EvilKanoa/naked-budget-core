@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import _ from 'lodash';
 import { getPage } from '../../../selectors/app';
-import { setPage } from "../../../actions/app";
+import { setPage } from '../../../actions/app';
 import Pages from '../../pages/index';
 import Icon from '@fortawesome/react-fontawesome';
 import './index.css';

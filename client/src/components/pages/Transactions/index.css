@@ -10,6 +10,7 @@
 
 #page-transactions-header .button {
     padding: 0 8px;
+    cursor: pointer;
 }
 
 #page-transactions-header .button .button-title {
@@ -21,5 +22,18 @@
 }
 
 #page-transactions-table {
+    font-weight: lighter;
+}
+
+#page-transactions-table th {
+    font-weight: lighter;
+}
+
+#page-transactions-table > tbody {
     overflow-y: auto;
+}
+
+#page-transactions .transaction-field {
+    border: none;
+    background-color: inherit;
 }
