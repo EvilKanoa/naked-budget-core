@@ -8,7 +8,7 @@
   },
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon --experimental-modules ./server/server.mjs",
+    "server": "nodemon -r dotenv/config --experimental-modules ./server/server.mjs",
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "lint": "eslint .",
     "build": "cd client && yarn install && yarn build",
@@ -17,7 +17,10 @@
     "test": "echo TODO: Implement testing"
   },
   "dependencies": {
-    "express": "4.16.2"
+    "body-parser": "1.18.3",
+    "dotenv": "6.0.0",
+    "express": "4.16.2",
+    "mongoose": "5.2.4"
   },
   "devDependencies": {
     "concurrently": "3.5.0",
