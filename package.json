@@ -2,17 +2,17 @@
   "name": "naked-budget-core",
   "version": "1.0.0",
   "license": "UNLICENSED",
-  "private": "true",
+  "private": true,
   "engines": {
-    "node": "8.11.2"
+    "node": "10.6.0"
   },
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon ./server/app.js",
+    "server": "nodemon --experimental-modules ./server/server.mjs",
     "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "lint": "eslint .",
     "build": "cd client && yarn install && yarn build",
-    "production": "NODE_ENV=production node ./server/app.js",
+    "production": "NODE_ENV=production node --experimental-modules ./server/server.mjs",
     "postinstall": "yarn build",
     "test": "echo TODO: Implement testing"
   },

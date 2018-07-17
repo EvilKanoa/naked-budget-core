@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "proxy": "http://localhost:3001/",
   "private": true,
+  "homepage": "http://nakedbudget.com/app",
   "dependencies": {
     "@fortawesome/fontawesome": "1.1.8",
     "@fortawesome/fontawesome-free-solid": "5.0.13",
