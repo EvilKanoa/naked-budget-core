@@ -3,11 +3,7 @@ import { AuthSchema } from './auth';
 import { PersonalSchema } from './personal';
 
 const UserSchema = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        index: true
-    },
+    _id: Schema.ObjectId,
     name: String,
     email: String,
     auth: AuthSchema,

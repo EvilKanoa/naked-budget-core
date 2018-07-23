@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const AuthSchema = new Schema({
-    id: String,
+    _id: Schema.ObjectId,
     hash: String,
     salt: String,
     providers: [{name: String, id: String}]
