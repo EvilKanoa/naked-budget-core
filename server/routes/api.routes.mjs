@@ -1,4 +1,7 @@
+import passport from 'passport';
+
 import { response } from '../utils';
+import UserController from '../controllers/user.controller';
 
 export default {
     route: 'api',
@@ -10,10 +13,8 @@ export default {
         {
             type: 'get',
             uri: 'users',
-            handler: (req, res) => {
-                res.status = 200;
-                res.json({msg: 'Users get'})
-            }
+            middleware: passport.authenticate('jwt', {session: false}),
+            handler: UserController.get
         }
     ]
 };

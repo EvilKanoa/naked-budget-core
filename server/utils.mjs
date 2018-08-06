@@ -1,5 +1,5 @@
-const response = (res, value, success = true, status = 500) => {
-    res.status(success ? 200 : status);
+const response = (res, value, success = true, status) => {
+    res.status(success ? 200 : (status || 500));
     if (typeof value === 'string') {
         res.json({
             message: value,
@@ -13,4 +13,6 @@ const response = (res, value, success = true, status = 500) => {
     }
 };
 
-export { response };
+const to = (promise) => promise.then((data) => [null, data]).catch((err) => [err, null]);
+
+export { response, to };
