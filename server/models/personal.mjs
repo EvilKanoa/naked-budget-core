@@ -1,4 +1,4 @@
-import mongoose, { Schema } from 'mongoose';
+import { Schema } from 'mongoose';
 
 const PersonalSchema = new Schema({
     budget: [{ month: Number, data: String }],
@@ -13,6 +13,4 @@ const PersonalSchema = new Schema({
     }]
 });
 
-const model = mongoose.model('personal', PersonalSchema);
-
-export { model as default, PersonalSchema };
+export default PersonalSchema;
