@@ -4,11 +4,21 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import _ from 'lodash';
 
+import omitDeep from 'omit-deep-lodash';
+
 import PassportMiddleware from './middleware/passport.middleware';
 import config from './config'
 import routes from './routes';
 
 const app = express();
+
+// add lodash mixins
+_.mixin({
+    'omitDeep': omitDeep
+});
+
+// add promise handler
+process.on('unhandledRejection', (err) => console.error('Uncaught error', err));
 
 // add passport middleware
 _.forEach(PassportMiddleware, (middleware) => passport.use(middleware));

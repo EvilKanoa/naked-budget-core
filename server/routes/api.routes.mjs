@@ -15,6 +15,12 @@ export default {
             uri: 'users',
             middleware: passport.authenticate('jwt', {session: false}),
             handler: UserController.get
+        },
+        {
+            type: 'post',
+            uri: 'users',
+            middleware: passport.authenticate('jwt', {session: false}),
+            handler: UserController.set
         }
     ]
 };

@@ -28,9 +28,10 @@ const UserSchema = new mongoose.Schema({
 
 UserSchema.methods.toWeb = function() {
     const json = this.toJSON();
+
     return {
         id: this._id,
-        ...(_.pick(json, 'email', 'personal'))
+        ...(_(json).pick('email', 'personal').omitDeep('_id').value())
     };
 };
 
