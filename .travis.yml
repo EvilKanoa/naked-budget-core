@@ -13,5 +13,5 @@ script:
 
 deploy:
   provider: heroku
-  api_key: ba79836e-3094-45e9-94c0-b29be2dfde65
+  api_key: ...
   app: naked-budget-core
